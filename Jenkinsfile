@@ -1,17 +1,17 @@
-pipeline{
-        agent any{
-                    stages{
-                        stage('One'){
+pipeline {
+        agent any {
+                    stages {
+                        stage('One') {
                                 steps{
                                         echo 'Hi Benc!'
                                 }
                         }
-                        stage('Two'){
+                        stage('Two') {
                                 steps{
                                         input('Do you want to proceed?')
                                 }
                         }
-                        stage('Three'){
+                        stage('Three') {
                                 when{
                                         not{
                                                 branch "master"
